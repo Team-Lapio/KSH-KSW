@@ -16,6 +16,8 @@ typedef struct Heap {
 	HData heapArr[HEAP_LEN];
 }Heap;
 
+void OnUsing(Heap& ph);
+void OffUsing(Heap& ph);
 void HeapInit(Heap& ph, PriorityComp pc);
 int HIsEmpty(Heap& ph);
 void HInsert(Heap& hp, HData data);
