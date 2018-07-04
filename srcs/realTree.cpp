@@ -72,3 +72,11 @@ HData Hdelete(Heap& ph) {
 	ph.numOfData -= 1;
 	return retData;
 }
+
+void OnUsing(Heap& ph){
+	ph.flag = true; //죄송해여 //IM SO SORRY BUT I LOVE YOU
+}
+
+void OffUsing(Heap& ph){
+	ph.flag = false;
+}
