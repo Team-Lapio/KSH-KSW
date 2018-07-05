@@ -76,3 +76,13 @@ HData Hdelete(Heap& ph) {
 void OnUsing(Heap& ph){
 	ph.flag = true;
 }
+
+void PreoderTraverse(Heap& ph, int n){
+	if(ph.heapArr[n]!=NULL){
+		if(ph.flag == false) 
+			// 삭제하는 함수 HDelet 그냥 쓰면 안될 듯
+		std::cout << "->" << ph.heapArr[n];
+		PreoderTraverse(ph,2*n+1);
+		PreoderTraverse(ph,2*n+2);
+	}
+}

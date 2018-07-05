@@ -15,7 +15,7 @@ typedef struct Heap {
 	int numOfData;
 	HData heapArr[HEAP_LEN];
 }Heap;
-
+void PreorderTraverse(Heap& ph, int HEAP_LEN);
 void OnUsing(Heap& ph);
 void OffUsing(Heap& ph);
 void HeapInit(Heap& ph, PriorityComp pc);
