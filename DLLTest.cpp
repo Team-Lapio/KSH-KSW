@@ -8,7 +8,7 @@ struct Node{
 };
 Node *head=(Node*)malloc(sizeof(Node));
 // Node *tail=(Node*)malloc(sizeof(Node));
-
+//
 void NodeInint(){
     head->prev = NULL;
     head->next = NULL;
