@@ -36,7 +36,7 @@ void AddLast(struct Node *target, int data){
 
 void DelNode(Node *target,int val){
     Node *now;
-    now = head->next;
+    now = target->next;
     while(now->data != val && now != NULL){
         now=now->next;
     }
