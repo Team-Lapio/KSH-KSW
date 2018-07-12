@@ -4,4 +4,4 @@ OUTPUT=kshksw
 SRCS=./srcs/*
 
 all:
-	$(CC) $(CPPFLAGS) -o $(OUTPUT) $(SRCS)
+	$(CC) $(CPPFLAGS) -m32 -o $(OUTPUT) $(SRCS)
