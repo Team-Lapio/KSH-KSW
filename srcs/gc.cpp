@@ -92,9 +92,3 @@ void GarbageCollector::end()
 {
     HeapAllocator::get().free_all();
 }
-// Chunk *now = head->next;
-// while(now->next){
-//     if(now->flag == false)
-//         free(now);
-//     now = now->next;
-// }

@@ -46,6 +46,7 @@ private:
     friend class GarbageCollector;
 
     HeapAllocator();
+    ~HeapAllocator();
 
     HeapAllocator(HeapAllocator& other) = delete;
     HeapAllocator(const HeapAllocator& other) = delete;

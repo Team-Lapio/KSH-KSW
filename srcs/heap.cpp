@@ -11,6 +11,11 @@ HeapAllocator::HeapAllocator()
     base->free_bin.next = nullptr;
     base->allocated.next = nullptr;
 }
+
+HeapAllocator::~HeapAllocator()
+{
+    free(base);
+}
 void* HeapAllocator::alloc(std::size_t size)
 {
     if (size < 1) {
@@ -73,7 +78,7 @@ void HeapAllocator::free(void* ptr)
 
 void HeapAllocator::free_all()
 {
-    if(base->allocated.next == nullptr){
+    if (base->allocated.next == nullptr) {
         return;
     }
     Chunk* c;
