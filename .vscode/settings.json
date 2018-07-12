@@ -4,6 +4,7 @@
         "xutility": "cpp",
         "initializer_list": "cpp",
         "string_view": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "limits": "cpp"
     }
 }
