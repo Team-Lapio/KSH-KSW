@@ -71,6 +71,17 @@ void HeapAllocator::free(void* ptr)
     c->next = nullptr;
 }
 
+void HeapAllocator::free_all()
+{
+    if(base->allocated.next == nullptr){
+        return;
+    }
+    Chunk* c;
+    while ((c = base->allocated.next)->next != nullptr) {
+        free(c->next->data);
+    }
+}
+
 int HeapAllocator::max()
 {
     return base->base_size;
@@ -81,9 +92,9 @@ int HeapAllocator::used()
     int i = 0;
     if (base->allocated.next != nullptr) {
         Chunk* bsc = base->allocated.next;
-        while (bsc->next == nullptr) {
+        i += bsc->size;
+        while ((bsc = bsc->next) != nullptr) {
             i += bsc->size;
-            bsc = bsc->next;
         }
     }
     return i;

@@ -52,6 +52,8 @@ private:
     HeapAllocator& operator=(HeapAllocator& other) = delete;
     HeapAllocator& operator=(const HeapAllocator& other) = delete;
 
+    void free_all();
+
 public:
     static HeapAllocator& get()
     {

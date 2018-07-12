@@ -5,3 +5,6 @@ SRCS=./srcs/*
 
 all:
 	$(CC) $(CPPFLAGS) -m32 -o $(OUTPUT) $(SRCS)
+
+debug:
+	$(CC) $(CPPFLAGS) -g -m32 -o $(OUTPUT)-debug $(SRCS)
