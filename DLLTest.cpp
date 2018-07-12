@@ -34,19 +34,19 @@ void AddLast(struct Node *target, int data){
     newNode->next = NULL;
 }
 
-void DelNode(Node *target,int val){
-    Node *now;
-    now = target->next;
-    while(now->data != val && now != NULL){
+void DelNode(Node* target,int val){
+    printf("return: %d\n",val);
+    Node* now;
+    now = target;
+    printf("-%d-\n",target->next->data);
+    while(now->next != NULL){
         now=now->next;
     }
-
-    if(now!=NULL){
-        now->prev->next = now->next;
-        now->next->prev = now->prev;
-        free(now);
-        return;
-    }
+    printf("now:%d\n",now->data);
+    now->prev->next = now->next;
+    now->next->prev = now->prev;    
+    printf("data:%d\n",now->data);
+    return;
 }
 /*
 void DeletNode(struct Node *target,int val){
